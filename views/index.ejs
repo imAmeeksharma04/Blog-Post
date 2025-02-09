@@ -18,7 +18,7 @@
     <div class="container text-light">
       <h1>Welcome to my blogs 😊</h1>
 
-      <% if(posts.length > 0) { %> <% posts.forEach(function(post,index) { %>
+      <% if(posts.length > 0) { %> <% posts.forEach((post,index)=> { %>
       <div class="card text-white bg-dark my-3">
         <div class="card-body">
           <h2 class="card-title"><%= post.heading %></h2>
