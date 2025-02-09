@@ -18,11 +18,15 @@
     <div class="container text-light">
       <h1>Welcome to my blogs 😊</h1>
 
-      <% if(posts.length > 0) { %> <% posts.forEach(function(post) { %>
+      <% if(posts.length > 0) { %> <% posts.forEach(function(post,index) { %>
       <div class="card text-white bg-dark my-3">
         <div class="card-body">
           <h2 class="card-title"><%= post.heading %></h2>
           <p class="card-text"><%= post.content %></p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <a href="/edit/<%= index %>" class="btn btn-outline-secondary">Edit Blog</a>
+                <a href="" class="btn btn-outline-secondary">Delete Blog</a>
+            </div>
         </div>
       </div>
       <% }); %> <% } else { %>
