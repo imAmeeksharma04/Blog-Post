@@ -20,6 +20,18 @@ app.get("/About", (req, res) => {
     res.render("About");
 });
 
+//Contact route
+app.get("/Contact", (req, res) => {
+    res.render("Contact");
+});
+
+//Contact Info parsed
+app.post("/Contact", (req, res) => {
+    const { name, email, message } = req.body;
+    console.log(`📩 New Contact Message from ${name} (${email}): ${message}`);
+    res.send("Thank you for reaching out! We will get back to you soon.");
+});
+
 //Create Blog post
 app.get("/Create_Blog", (req, res) => {
     res.render("Create_Blog");
