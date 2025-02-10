@@ -54,6 +54,16 @@ app.post("/update/:id", (req, res) => {
     res.redirect("/");
 });
 
+//Delete Blog Post
+app.post("/delete/:id", (req, res) => {
+    const postIndex = req.params.id;
+
+    if (postIndex >= 0 && postIndex < posts.length) {
+        posts.splice(postIndex, 1); // remove the post from the posts array
+    }
+
+    res.redirect("/");
+});
 
 app.listen(port, () => {
     console.log(`Server is running at port ${port}`);
