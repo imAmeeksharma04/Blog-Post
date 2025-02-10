@@ -35,7 +35,7 @@ node index.js
 
 ### Or
 
-### Install nodemon and run :
+### Install nodemon :
 
 ```
 npm install nodemon
