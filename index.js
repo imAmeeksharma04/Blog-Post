@@ -1,4 +1,5 @@
 import express from "express";
+import path from "path";
 import bodyParser from "body-parser";
 
 const app = express();
@@ -6,7 +7,9 @@ const port = process.env.PORT || 3000;
 const posts = []; // to store the posts
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public"));
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, "public")));
+
 
 app.set("view engine", "ejs"); // setting the view engine to ejs
 
