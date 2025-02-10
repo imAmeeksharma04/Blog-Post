@@ -15,6 +15,11 @@ app.get("/", (req, res) => {
     res.render("index", { posts: posts });
 });
 
+//About route
+app.get("/About", (req, res) => {
+    res.render("About");
+});
+
 //Create Blog post
 app.get("/Create_Blog", (req, res) => {
     res.render("Create_Blog");
