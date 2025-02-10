@@ -30,7 +30,16 @@ npm install
 ### 3️⃣ Run the server:
 
 ```
-npm start
+node index.js
+```
+
+### Or
+
+### Install nodemon and run :
+
+```
+npm install nodemon
+nodemon index.js
 ```
 
 🚀 The app will run on http://localhost:3000
